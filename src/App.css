@@ -1,0 +1,144 @@
+/* Reset a základ */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;  /* pôvodne #fff, teraz jemno-sivé */
+  color: #111;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  background-color: #cc0000; /* červená */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav a {
+  margin-left: 1.5rem;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.header nav a:hover {
+  color: #ffdddd;
+}
+
+/* Hero sekcia */
+.hero {
+  background: #ffffff;       /* pôvodne #f8f8f8, teraz čistá biela */
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;        /* ak máš overlay logo */
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #cc0000;
+}
+
+.hero .btn {
+  background-color: #cc0000;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 10s ease;
+}
+
+
+.hero .btn:active {
+  transform: scale(0.97); /* slight press effect */
+}
+
+.hero .btn:hover {
+  background-color: #a00000;
+}
+
+/* Sekcie */
+section {
+  padding: 3rem 2rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #cc0000;
+  margin-bottom: 1rem;
+}
+
+/* Služby a projekty */
+.services ul,
+.projects .grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.projects .card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background: #f8f8f8;      /* pôvodne #fff, teraz jemno-sivé */
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.projects img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Kontakt */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact button {
+  background-color: #cc0000;
+  color: white;
+  padding: 0.75rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #a00000;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+html {
+  scroll-behavior: smooth; /* základné hladké posúvanie */
+}
