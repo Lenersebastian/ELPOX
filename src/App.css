@@ -1,8 +1,7 @@
-/* Reset a základ */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f8f8;  /* pôvodne #fff, teraz jemno-sivé */
+  background-color: #f8f8f8; 
   color: #111;
 }
 
@@ -11,9 +10,8 @@ a {
   color: inherit;
 }
 
-/* Header */
 .header {
-  background-color: #cc0000; /* červená */
+  background-color: #cc0000; 
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -31,12 +29,15 @@ a {
   color: #ffdddd;
 }
 
-/* Hero sekcia */
+.nav-logo {
+  height: 20px;      
+}
+
 .hero {
-  background: #ffffff;       /* pôvodne #f8f8f8, teraz čistá biela */
+  background: #ffffff;    
   padding: 4rem 2rem;
   text-align: center;
-  position: relative;        /* ak máš overlay logo */
+  position: relative;       
 }
 
 .hero h2 {
@@ -57,14 +58,13 @@ a {
 
 
 .hero .btn:active {
-  transform: scale(0.97); /* slight press effect */
+  transform: scale(0.97); 
 }
 
 .hero .btn:hover {
   background-color: #a00000;
 }
 
-/* Sekcie */
 section {
   padding: 3rem 2rem;
 }
@@ -75,7 +75,6 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-/* Služby a projekty */
 .services ul,
 .projects .grid {
   list-style: none;
@@ -89,7 +88,7 @@ section h2 {
 .projects .card {
   border: 1px solid #ddd;
   padding: 1rem;
-  background: #f8f8f8;      /* pôvodne #fff, teraz jemno-sivé */
+  background: #f8f8f8;
   border-radius: 5px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -101,7 +100,6 @@ section h2 {
   border-radius: 4px;
 }
 
-/* Kontakt */
 .contact form {
   display: flex;
   flex-direction: column;
@@ -131,7 +129,6 @@ section h2 {
   background-color: #a00000;
 }
 
-/* Footer */
 .footer {
   background-color: #111;
   color: white;
@@ -140,5 +137,5 @@ section h2 {
 }
 
 html {
-  scroll-behavior: smooth; /* základné hladké posúvanie */
+  scroll-behavior: smooth;
 }

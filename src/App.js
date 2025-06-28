@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './elpox_logo.jpg';
 import './App.css';
+import logo_svg from './logo_white.svg';  
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function Header() {
     <header className="header">
       {/* Navigácia */}
       <nav>
+        <img src={logo_svg} alt="ELPOX logo" className="nav-logo" />
         <a href="#sluzby">Služby</a>
         <a href="#projekty">Projekty</a>
         <a href="#kontakt">Kontakt</a>
