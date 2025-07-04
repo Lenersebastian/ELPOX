@@ -100,7 +100,6 @@ a {
 @media (max-width: 600px) {
   .hero__logo-overlay img {
     width: 300px;     /* smaller on mobiles */
-    opacity: 0.15;   /* you can tweak opacity too */
   }
   
   .hero__logo-overlay {
