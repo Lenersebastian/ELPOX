@@ -5,33 +5,88 @@ body {
   color: #111;
 }
 
+/* in App.css */
+
+ ul {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 0;
+  list-style: none;
+}
+
+/* make each service-item vertical */
+ul li {
+  display: flex;
+  flex-direction: column;    /* stack children vertically */
+  align-items: center;       /* center them horizontally */
+  text-align: center;        /* center multiline text */
+  gap: 0.5rem;               /* space between title & image */
+  padding: 1rem;             /* optional: give some breathing room */
+  background: #fff;          /* card background, if you like */
+  border-radius: 5px;        /* optional styling */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ensure your placeholder-image scales */
+.placeholder-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 a {
   text-decoration: none;
   color: inherit;
 }
-
+/* Header/nav container */
 .header {
-  background-color: #cc0000; 
-  color: white;
-  padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 1.5rem;
+  background-color: #cc0000;
 }
 
-.header nav a {
-  margin-left: 1.5rem;
-  font-weight: bold;
-  transition: color 0.2s ease;
+/* Nav buttons styled like links */
+.header nav {
+  display: flex;
+  gap: 2rem;
 }
 
-.header nav a:hover {
-  color: #ffdddd;
+.header nav button {
+  background: none;
+  border: none;
+  color: #fff;                /* white text */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.125rem;        /* slightly bigger */
+  font-weight: 500;           /* medium weight */
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease;/* smooth color change */
 }
 
-.nav-logo {
-  height: 20px;      
+/* Hover: slightly fade white to reveal red background */
+.header nav button:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
+
+/* Focus styles: subtle color change + custom outline */
+.header nav button:focus-visible {
+  color: rgba(255, 255, 255, 0.8);
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 4px;
+}
+
+/* Remove underlines entirely */
+.header nav button,
+.header nav button:hover,
+.header nav button:focus-visible {
+  text-decoration: none;
+}
+
 
 .hero {
   background: #ffffff;    

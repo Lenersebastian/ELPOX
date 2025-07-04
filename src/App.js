@@ -1,7 +1,6 @@
-import React from 'react';
 import logo from './elpox_logo.jpg';
 import './App.css';
-import logo_svg from './logo_white.svg';  
+import ph_image from './placeholder.png';  
 
 function App() {
   return (
@@ -16,16 +15,19 @@ function App() {
   );
 }
 
+const scrollTo = id => e => {
+  e.preventDefault();                        // no default href behavior
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+};
+
 function Header() {
   return (
     <header className="header">
-      {/* Navigácia */}
-      <nav>
-        <img src={logo_svg} alt="ELPOX logo" className="nav-logo" />
-        <a href="#sluzby">Služby</a>
-        <a href="#projekty">Projekty</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
+    <nav>
+      <button type="button" onClick={scrollTo('sluzby')}>Služby</button>
+      <button type="button" onClick={scrollTo('projekty')}>Projekty</button>
+      <button type="button" onClick={scrollTo('kontakt')}>Kontakt</button>
+    </nav>
     </header>
   );
 }
@@ -43,8 +45,13 @@ function Hero() {
       <p>
         ELPOX poskytuje komplexné riešenia požiarnej ochrany pre priemyselné i obytné objekty.
       </p>
-      <a href="#kontakt" className="btn">Zavolajte nám</a>
-    </section>
+      <button
+        type="button"
+        className="btn"
+        onClick={scrollTo('kontakt')}
+      >
+        Zavolajte nám
+      </button>    </section>
   );
 }
 
@@ -53,10 +60,29 @@ function Services() {
     <section id="sluzby" className="services">
       <h2>Naše služby</h2>
       <ul>
-        <li>Inštalácia požiarnych hlásičov a systémov</li>
-        <li>Pravidelná údržba a revízie</li>
-        <li>Tvorba projektovej dokumentácie</li>
-        <li>Školenia a odborné poradenstvo</li>
+        <li> 
+          Pravidelná údržba a revízie
+          <img 
+            src={ph_image} 
+            alt="Ilustrácia služieb" 
+            className="placeholder-image"
+            />
+       </li>
+              
+        <li>
+          Tvorba projektovej dokumentácie
+          <img src={ph_image} 
+          alt="Ilustrácia služieb" 
+          className="placeholder-image"/>
+        </li>
+
+        <li>
+          Školenia a odborné poradenstvo
+          <img 
+            src={ph_image}
+            alt="Ilustrácia služieb"
+            className="placeholder-image"/>
+        </li>
       </ul>
     </section>
   );
@@ -66,24 +92,32 @@ function Projects() {
   return (
     <section id="projekty" className="projects">
       <h2>Vybrané projekty</h2>
-      <div className="grid">
-        <div className="card">
-          <img src="projekt1.jpg" alt="Administratívna budova"/>
+      <ul>
+        <li>
+          <img 
+            src={ph_image}
+            alt="Administratívna budova"
+          />
           <h3>Administratívna budova</h3>
           <p>
             Návrh a montáž komplexného požiarného systému pre 
             moderné kancelárske priestory.
           </p>
-        </div>
-        <div className="card">
-          <img src="projekt2.jpg" alt="Výrobná hala"/>
+        </li>
+
+        <li>
+          <img 
+            src={ph_image}
+            alt="Administratívna budova"
+          />
           <h3>Výrobná hala</h3>
           <p>
             Inštalácia automatického hasiacich zariadení v 
             priemyselnom areáli.
           </p>
-        </div>
-      </div>
+        </li>
+
+      </ul>
     </section>
   );
 }
