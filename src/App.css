@@ -95,6 +95,23 @@ a {
   position: relative;       
 }
 
+
+/* phones (up to 600px wide): shrink the logo */
+@media (max-width: 600px) {
+  .hero__logo-overlay img {
+    width: 300px;     /* smaller on mobiles */
+    opacity: 0.15;   /* you can tweak opacity too */
+  }
+  
+  .hero__logo-overlay {
+    top: 0.5rem;     /* move it down a bit if needed */
+  }
+
+  h2 {
+  text-align: center;
+}
+}
+
 .hero h2 {
   font-size: 2.5rem;
   color: #cc0000;
